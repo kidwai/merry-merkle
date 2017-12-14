@@ -1,5 +1,9 @@
 var path = require('path');
 var fs = require('fs');
+var build = require('./lib/build');
+
+fs.writeFileSync('lib/contracts.json', JSON.stringify(build()));
+
 
 module.exports = {
 	entry: './app.js',

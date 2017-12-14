@@ -1,0 +1,7 @@
+{
+	"network": "rinkeby",
+	"chainId": 4,
+	"contracts": {
+		"SimpleFundraiser": "0x08970fed061e7747cd9a38d680a601510cb659fb"
+	}
+}

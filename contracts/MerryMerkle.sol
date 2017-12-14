@@ -8,13 +8,13 @@ contract MerryMerkle {
         bytes32 recognition;
     }
     
-    struct MerryMerkle {
+    struct MerkleTree {
         mapping (uint => uint8[3]) rgb;
         uint height;
     }
     
     function update (
-        MerryMerkle storage m, 
+        MerkleTree storage m, 
         uint index, 
         uint8[3] rgb) internal returns (bool) {
             require (index < 2**m.height);
@@ -26,7 +26,7 @@ contract MerryMerkle {
             return true;
     }
     
-    MerryMerkle public mm;
+    MerkleTree public mm;
     mapping (address => Donor) public donors;
     uint[3] costs = [5*10**18, 10*10**18, 100*10**18];
 
@@ -41,14 +41,15 @@ contract MerryMerkle {
         return true;
     }
     
-    
+
+/*    
     function setSong(uint8 song) payable public returns (bool) {
         // todo
         require(msg.value >= costs[1]);
         Donation(msg.sender, msg.value);
         return true;
     }
-
+*/
 
     function setLight(uint8[3] rgb) payable public returns (bool) {
         require (msg.value >= costs[0]);

@@ -870,7 +870,7 @@
 
 var BigNumber = __webpack_require__(18);
 var sha3 = __webpack_require__(19);
-var utf8 = __webpack_require__(98);
+var utf8 = __webpack_require__(100);
 
 var unitMap = {
     'noether':      '0',
@@ -9100,7 +9100,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! bignumber.js v2.0.7 https://github.com/Mik
  * @date 2015
  */
 
-var CryptoJS = __webpack_require__(75);
+var CryptoJS = __webpack_require__(77);
 var sha3 = __webpack_require__(46);
 
 module.exports = function (value, options) {
@@ -10559,15 +10559,15 @@ module.exports = {
 
 var f = __webpack_require__(4);
 
-var SolidityTypeAddress = __webpack_require__(101);
-var SolidityTypeBool = __webpack_require__(102);
-var SolidityTypeInt = __webpack_require__(103);
-var SolidityTypeUInt = __webpack_require__(104);
-var SolidityTypeDynamicBytes = __webpack_require__(105);
-var SolidityTypeString = __webpack_require__(106);
-var SolidityTypeReal = __webpack_require__(107);
-var SolidityTypeUReal = __webpack_require__(108);
-var SolidityTypeBytes = __webpack_require__(109);
+var SolidityTypeAddress = __webpack_require__(103);
+var SolidityTypeBool = __webpack_require__(104);
+var SolidityTypeInt = __webpack_require__(105);
+var SolidityTypeUInt = __webpack_require__(106);
+var SolidityTypeDynamicBytes = __webpack_require__(107);
+var SolidityTypeString = __webpack_require__(108);
+var SolidityTypeReal = __webpack_require__(109);
+var SolidityTypeUReal = __webpack_require__(110);
+var SolidityTypeBytes = __webpack_require__(111);
 
 var isDynamic = function (solidityType, type) {
    return solidityType.isDynamicType(type) ||
@@ -15723,9 +15723,13 @@ module.exports = SolidityEvent;
 
 etherscan = __webpack_require__(50);
 utils = __webpack_require__(30);
-charities = __webpack_require__(71);
-Web3 = __webpack_require__(72);
-Ipfs = __webpack_require__(131);
+config = __webpack_require__(71);
+
+contracts = __webpack_require__(72);
+charities = __webpack_require__(73);
+
+Web3 = __webpack_require__(74);
+Ipfs = __webpack_require__(133);
 
 /***/ }),
 /* 50 */
@@ -18122,13 +18126,25 @@ var objectKeys = Object.keys || function (obj) {
 /* 71 */
 /***/ (function(module, exports) {
 
-module.exports = [{"name":"The Water Project","url":"thewaterproject.com","description":"The Water Project is unlocking human potential by providing sustainable water projects to communities in sub-Saharan Africa who suffer needlessly from a lack of access to clean water and proper sanitation. Access to water unlocks potential. It removes obstacles that hinder a community from growing itself out of poverty.","payment":{"bitcoin":"1HesYJSP1QqcyPEjnQ9vzBL1wujruNGe7R"}},{"name":"Omni Nano","url":"www.omninano.org","description":"Omni Nano is a 501(c)(3) public benefit organization devoted to nanotechnology education. Our curriculum is designed for high school and college students and focuses on the practical applications of nanotechnology to promote professional development and STEM career opportunities.","payment":{"bitcoin":"16Sy8mvjyNgCRYS14m1Rtca3UfrFPzz9eJ"}},{"name":"Seans Outpost","url":"http://seansoutpost.com","description":"Pensacola Homeless Outreach…fueled by Bitcoin.","payment":{"bitcoin":"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"}},{"name":"Save The Children","url":"www.savethechildren.org","description":"Save the Children invests in childhood – every day – in times of crisis and for our future. In the United States and around the world – we give children a healthy start – the opportunity to learn and protection from harm.","payment":{}},{"name":"Songs of Love","url":"www.songsoflove.org","description":"The Songs of Love Foundation is a national nonprofit 501(c)(3) organization that creates free personalized original songs to uplift children and teens currently facing tough medical physical or emotional challenges. Each CD is professionally produced with lyrics containing the child's name and references to all of his or her favorite activities things people and pets. Songs are written and performed in any language in the musical style that the child likes best by a variety of talented professionals.","payment":{"bitcoin":"1946W6LDsEYF9B5sPYDKfwLw6YBZuHns4L"}},{"name":"Watsi","url":"Watsi.org","description":"Watsi is a global crowdfunding platforfor healthcare that enables anyone to donate as little as $5 to directly fund life - changing medical care for people in need.100 % of every donation funds medical care and we are dedicated to complete transparency","payment":{"bitcoin":"1PAt5oKQGBRigFDY6fB2WgQTtQJNzFyTDr"}},{"name":"TunaPanda","url":"www.tunapanda.org","description":"Tunapanda Institute does digital era vocational skill training in low-income parts of East Africa. The organization focuses on skills like web design computer programming and video editing that can help people earn an income improve their communities and engage in meaningful self-expression. They deploy computer networks using open source software and free (libre) educational video content.","payment":{"bitcoin":"1CU5YgjquupDw6UeXEyA9VEBH34R7fZ19b"}},{"name":"Chicago Wish Foundation","url":"chicagowish.org/bitcoin-donation","description":"A Special Wish Chicago is the wish-granting foundation in the Chicagoland area dedicated to enlivening families with hope and joy by granting the wishes of local children and young adults – from birth through age 20 – who have been diagnosed with life-threatening conditions. The Chicago chapter is wholeheartedly committed to creating special memories through connecting children with the loving hearts and donations of individuals and corporate sponsors in the Chicagoland community.","payment":{"bitcoin":"16DEzKc9fX4XfgGzEvQUJmoYeUrbRNXqxe"}},{"name":"Run 2 Rescure","url":"run2rescue.com/bitcoin.html","description":"Run 2 Rescue is a Christian non-profit organization committed to restoring victims of sex trafficking.","payment":{"bitcoin":"1AS3TiTqgJZK6CfNfqcbPXSx4PTFvfghvF"}}]
+module.exports = {"network":"rinkeby","chainId":4,"contracts":{"SimpleFundraiser":"0x08970fed061e7747cd9a38d680a601510cb659fb"}}
 
 /***/ }),
 /* 72 */
+/***/ (function(module, exports) {
+
+module.exports = {"MerryMerkle":{"abi":[{"constant":false,"inputs":[{"name":"rgb","type":"uint8[3]"}],"name":"setLight","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"recognition","type":"bytes32"}],"name":"setRecognition","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"donors","outputs":[{"name":"donation","type":"uint256"},{"name":"recognition","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"mm","outputs":[{"name":"height","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Donation","type":"event"}],"bin":"6060604052606060405190810160405280674563918244f4000068ffffffffffffffffff168152602001678ac7230489e8000068ffffffffffffffffff16815260200168056bc75e2d6310000068ffffffffffffffffff16815250600390600361006a92919061007b565b50341561007657600080fd5b6100ed565b82600381019282156100b7579160200282015b828111156100b6578251829068ffffffffffffffffff1690559160200191906001019061008e565b5b5090506100c491906100c8565b5090565b6100ea91905b808211156100e65760008160009055506001016100ce565b5090565b90565b610500806100fc6000396000f300606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806325a12a561461010257806342cdc48514610155578063ca0cdea814610189578063e90eaa51146101e5575b34600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2005b61013b6004808060600190600380602002604051908101604052809291908260036020028082843782019150505050509190505061020e565b604051808215151515815260200191505060405180910390f35b61016f6004808035600019169060200190919050506102b1565b604051808215151515815260200191505060405180910390f35b341561019457600080fd5b6101c0600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610375565b6040518083815260200182600019166000191681526020019250505060405180910390f35b34156101f057600080fd5b6101f8610399565b6040518082815260200191505060405180910390f35b60006003600060038110151561022057fe5b0154341015151561023057600080fd5b61023e6000600654846103a5565b5060006001015460020a600181151561025357fe5b06600654016006819055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2919050565b6000600360026003811015156102c357fe5b015434101515156102d357600080fd5b81600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010181600019169055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a260019050919050565b60026020528060005260406000206000915090508060000154908060010154905082565b60008060010154905081565b6000836001015460020a831015156103bc57600080fd5b5b60008311156103ff57818460000160008581526020019081526020016000209060036103ea92919061040a565b506002838115156103f757fe5b0492506103bd565b600190509392505050565b826003601f016020900481019282156104935791602002820160005b8382111561046457835183826101000a81548160ff021916908360ff1602179055509260200192600101602081600001049283019260010302610426565b80156104915782816101000a81549060ff0219169055600101602081600001049283019260010302610464565b505b5090506104a091906104a4565b5090565b6104d191905b808211156104cd57600081816101000a81549060ff0219169055506001016104aa565b5090565b905600a165627a7a7230582012e2997d128999496ca0d85701c852adba275f40b1457a4edff6b9447793d72f0029"},"SimpleFundraiser":{"abi":[{"constant":false,"inputs":[{"name":"r","type":"uint8"},{"name":"g","type":"uint8"},{"name":"b","type":"uint8"}],"name":"setLight","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"r","type":"uint8"},{"indexed":false,"name":"g","type":"uint8"},{"indexed":false,"name":"b","type":"uint8"}],"name":"Light","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Donation","type":"event"}],"bin":"6060604052670de0b6b3a7640000600055341561001b57600080fd5b6101ad8061002a6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063627a25a814610091575b3373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2005b6100c2600480803560ff1690602001909190803560ff1690602001909190803560ff169060200190919050506100c4565b005b60005434101515156100d557600080fd5b7f73e3b30d340f6676791d363dc4a3bacc64604289006a91bde44a4afaea6ced40838383604051808460ff1660ff1681526020018360ff1660ff1681526020018260ff1660ff168152602001935050505060405180910390a13373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a25050505600a165627a7a72305820771fb22f7fa1c7c7c00464c83684ce7ada238a786cdfeaab66b20cb156fe9ca20029","instance":"0x08970fed061e7747cd9a38d680a601510cb659fb"}}
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports) {
+
+module.exports = [{"name":"The Water Project","url":"thewaterproject.com","description":"The Water Project is unlocking human potential by providing sustainable water projects to communities in sub-Saharan Africa who suffer needlessly from a lack of access to clean water and proper sanitation. Access to water unlocks potential. It removes obstacles that hinder a community from growing itself out of poverty.","payment":{"bitcoin":"1HesYJSP1QqcyPEjnQ9vzBL1wujruNGe7R"}},{"name":"Omni Nano","url":"www.omninano.org","description":"Omni Nano is a 501(c)(3) public benefit organization devoted to nanotechnology education. Our curriculum is designed for high school and college students and focuses on the practical applications of nanotechnology to promote professional development and STEM career opportunities.","payment":{"bitcoin":"16Sy8mvjyNgCRYS14m1Rtca3UfrFPzz9eJ"}},{"name":"Seans Outpost","url":"http://seansoutpost.com","description":"Pensacola Homeless Outreach…fueled by Bitcoin.","payment":{"bitcoin":"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"}},{"name":"Save The Children","url":"www.savethechildren.org","description":"Save the Children invests in childhood – every day – in times of crisis and for our future. In the United States and around the world – we give children a healthy start – the opportunity to learn and protection from harm.","payment":{}},{"name":"Songs of Love","url":"www.songsoflove.org","description":"The Songs of Love Foundation is a national nonprofit 501(c)(3) organization that creates free personalized original songs to uplift children and teens currently facing tough medical physical or emotional challenges. Each CD is professionally produced with lyrics containing the child's name and references to all of his or her favorite activities things people and pets. Songs are written and performed in any language in the musical style that the child likes best by a variety of talented professionals.","payment":{"bitcoin":"1946W6LDsEYF9B5sPYDKfwLw6YBZuHns4L"}},{"name":"Watsi","url":"Watsi.org","description":"Watsi is a global crowdfunding platforfor healthcare that enables anyone to donate as little as $5 to directly fund life - changing medical care for people in need.100 % of every donation funds medical care and we are dedicated to complete transparency","payment":{"bitcoin":"1PAt5oKQGBRigFDY6fB2WgQTtQJNzFyTDr"}},{"name":"TunaPanda","url":"www.tunapanda.org","description":"Tunapanda Institute does digital era vocational skill training in low-income parts of East Africa. The organization focuses on skills like web design computer programming and video editing that can help people earn an income improve their communities and engage in meaningful self-expression. They deploy computer networks using open source software and free (libre) educational video content.","payment":{"bitcoin":"1CU5YgjquupDw6UeXEyA9VEBH34R7fZ19b"}},{"name":"Chicago Wish Foundation","url":"chicagowish.org/bitcoin-donation","description":"A Special Wish Chicago is the wish-granting foundation in the Chicagoland area dedicated to enlivening families with hope and joy by granting the wishes of local children and young adults – from birth through age 20 – who have been diagnosed with life-threatening conditions. The Chicago chapter is wholeheartedly committed to creating special memories through connecting children with the loving hearts and donations of individuals and corporate sponsors in the Chicagoland community.","payment":{"bitcoin":"16DEzKc9fX4XfgGzEvQUJmoYeUrbRNXqxe"}},{"name":"Run 2 Rescure","url":"run2rescue.com/bitcoin.html","description":"Run 2 Rescue is a Christian non-profit organization committed to restoring victims of sex trafficking.","payment":{"bitcoin":"1AS3TiTqgJZK6CfNfqcbPXSx4PTFvfghvF"}}]
+
+/***/ }),
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Web3 = __webpack_require__(73);
+var Web3 = __webpack_require__(75);
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
@@ -18139,7 +18155,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -18169,23 +18185,23 @@ module.exports = Web3;
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(74);
+var RequestManager = __webpack_require__(76);
 var Iban = __webpack_require__(24);
-var Eth = __webpack_require__(99);
-var DB = __webpack_require__(118);
-var Shh = __webpack_require__(119);
-var Net = __webpack_require__(120);
-var Personal = __webpack_require__(121);
-var Swarm = __webpack_require__(122);
-var Settings = __webpack_require__(123);
-var version = __webpack_require__(124);
+var Eth = __webpack_require__(101);
+var DB = __webpack_require__(120);
+var Shh = __webpack_require__(121);
+var Net = __webpack_require__(122);
+var Personal = __webpack_require__(123);
+var Swarm = __webpack_require__(124);
+var Settings = __webpack_require__(125);
+var version = __webpack_require__(126);
 var utils = __webpack_require__(1);
 var sha3 = __webpack_require__(19);
-var extend = __webpack_require__(125);
-var Batch = __webpack_require__(126);
+var extend = __webpack_require__(127);
+var Batch = __webpack_require__(128);
 var Property = __webpack_require__(16);
-var HttpProvider = __webpack_require__(127);
-var IpcProvider = __webpack_require__(130);
+var HttpProvider = __webpack_require__(129);
+var IpcProvider = __webpack_require__(132);
 var BigNumber = __webpack_require__(18);
 
 
@@ -18297,7 +18313,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -18568,13 +18584,13 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(76), __webpack_require__(77), __webpack_require__(12), __webpack_require__(13), __webpack_require__(27), __webpack_require__(44), __webpack_require__(78), __webpack_require__(45), __webpack_require__(79), __webpack_require__(46), __webpack_require__(80), __webpack_require__(28), __webpack_require__(81), __webpack_require__(14), __webpack_require__(2), __webpack_require__(82), __webpack_require__(83), __webpack_require__(84), __webpack_require__(85), __webpack_require__(86), __webpack_require__(87), __webpack_require__(88), __webpack_require__(89), __webpack_require__(90), __webpack_require__(91), __webpack_require__(92), __webpack_require__(93), __webpack_require__(94), __webpack_require__(95), __webpack_require__(96), __webpack_require__(97));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(78), __webpack_require__(79), __webpack_require__(12), __webpack_require__(13), __webpack_require__(27), __webpack_require__(44), __webpack_require__(80), __webpack_require__(45), __webpack_require__(81), __webpack_require__(46), __webpack_require__(82), __webpack_require__(28), __webpack_require__(83), __webpack_require__(14), __webpack_require__(2), __webpack_require__(84), __webpack_require__(85), __webpack_require__(86), __webpack_require__(87), __webpack_require__(88), __webpack_require__(89), __webpack_require__(90), __webpack_require__(91), __webpack_require__(92), __webpack_require__(93), __webpack_require__(94), __webpack_require__(95), __webpack_require__(96), __webpack_require__(97), __webpack_require__(98), __webpack_require__(99));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -18591,7 +18607,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -18672,7 +18688,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -18826,7 +18842,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -18911,7 +18927,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -18999,7 +19015,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -19271,7 +19287,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19421,7 +19437,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19504,7 +19520,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19567,7 +19583,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19688,7 +19704,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19747,7 +19763,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19792,7 +19808,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19846,7 +19862,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19895,7 +19911,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19940,7 +19956,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19990,7 +20006,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20025,7 +20041,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20096,7 +20112,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20333,7 +20349,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21108,7 +21124,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21252,7 +21268,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21449,7 +21465,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21644,7 +21660,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/utf8js v2.1.2 by @mathias */
@@ -21894,7 +21910,7 @@ module.exports = RequestManager;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42)(module), __webpack_require__(3)))
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21928,13 +21944,13 @@ var utils = __webpack_require__(1);
 var Method = __webpack_require__(8);
 var Property = __webpack_require__(16);
 var c = __webpack_require__(23);
-var Contract = __webpack_require__(100);
+var Contract = __webpack_require__(102);
 var watches = __webpack_require__(26);
 var Filter = __webpack_require__(25);
-var IsSyncing = __webpack_require__(112);
-var namereg = __webpack_require__(113);
+var IsSyncing = __webpack_require__(114);
+var namereg = __webpack_require__(115);
 var Iban = __webpack_require__(24);
-var transfer = __webpack_require__(116);
+var transfer = __webpack_require__(118);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -22255,7 +22271,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -22283,8 +22299,8 @@ module.exports = Eth;
 var utils = __webpack_require__(1);
 var coder = __webpack_require__(29);
 var SolidityEvent = __webpack_require__(48);
-var SolidityFunction = __webpack_require__(110);
-var AllEvents = __webpack_require__(111);
+var SolidityFunction = __webpack_require__(112);
+var AllEvents = __webpack_require__(113);
 
 /**
  * Should be called to encode constructor params
@@ -22571,7 +22587,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22603,7 +22619,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22635,7 +22651,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22673,7 +22689,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22711,7 +22727,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22737,7 +22753,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22763,7 +22779,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22801,7 +22817,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22839,7 +22855,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22874,7 +22890,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23163,7 +23179,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23257,7 +23273,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23356,7 +23372,7 @@ module.exports = IsSyncing;
 
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23381,8 +23397,8 @@ module.exports = IsSyncing;
  * @date 2015
  */
 
-var globalRegistrarAbi = __webpack_require__(114);
-var icapRegistrarAbi= __webpack_require__(115);
+var globalRegistrarAbi = __webpack_require__(116);
+var icapRegistrarAbi= __webpack_require__(117);
 
 var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
 var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -23401,19 +23417,19 @@ module.exports = {
 
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23439,7 +23455,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],
  */
 
 var Iban = __webpack_require__(24);
-var exchangeAbi = __webpack_require__(117);
+var exchangeAbi = __webpack_require__(119);
 
 /**
  * Should be used to make Iban transfer
@@ -23511,13 +23527,13 @@ module.exports = transfer;
 
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23589,7 +23605,7 @@ module.exports = DB;
 
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23739,7 +23755,7 @@ module.exports = Shh;
 
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23797,7 +23813,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23919,7 +23935,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24071,7 +24087,7 @@ module.exports = Swarm;
 
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports) {
 
 
@@ -24086,13 +24102,13 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.20.2"}
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(6);
@@ -24146,7 +24162,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -24218,7 +24234,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -24254,10 +24270,10 @@ if (typeof window !== 'undefined' && window.XMLHttpRequest) {
   XMLHttpRequest = window.XMLHttpRequest; // jshint ignore: line
 // node
 } else {
-  XMLHttpRequest = __webpack_require__(128).XMLHttpRequest; // jshint ignore: line
+  XMLHttpRequest = __webpack_require__(130).XMLHttpRequest; // jshint ignore: line
 }
 
-var XHR2 = __webpack_require__(129); // jshint ignore: line
+var XHR2 = __webpack_require__(131); // jshint ignore: line
 
 /**
  * HttpProvider should be used to send rpc calls over http
@@ -24382,7 +24398,7 @@ module.exports = HttpProvider;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9).Buffer))
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24398,14 +24414,14 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports) {
 
 module.exports = XMLHttpRequest;
 
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24619,13 +24635,13 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var XMLHttpRequest = __webpack_require__(132);
+var XMLHttpRequest = __webpack_require__(134);
 
 module.exports = IPFS;
 
@@ -24799,7 +24815,7 @@ IPFS.prototype.catJSON = function cat(ipfsHash, callback) {
 };
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
