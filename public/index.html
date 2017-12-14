@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cryptmas | 2017 </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/container.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/menu.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/search.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/divider.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/icon.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.min.css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/search.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<style type="text/css">
+		.canvas {
+			border-style: solid;
+		}
+
+		.ui .search {
+			margin-top: 1%; 
+			margin-right: 5em;
+		}
+
+		.ui .cards {
+			margin-top: 10em;
+			margin-left: 5%;
+		}
+
+		#card {
+			align-content: center;
+		}
+
+
+		.active {
+		    background-color: #4CAF50;
+		}
+
+		svg {
+			align-content: center;
+			margin-top: 5%;
+			width: 80%;
+			margin-left: 25%;
+			margin-right: 10%;
+			min-height: 800px;
+		}
+
+
+		path, line {
+			stroke: #777;
+		}
+
+		/* Document styling */
+		body {
+			font-family: "Helvetica Neue", Helvetica, sans-serif;
+			background: #484848!important;
+		}
+
+
+
+		#main {
+			margin-top: 3em;
+			margin-left: 3em;
+			margin-right: 5em;
+			align-content: center;
+		}
+
+
+
+	</style>
+
+	<script type="text/javascript" src="dist/app.bundle.js"></script>
+	<script type="text/javascript" src="js/tree.js"></script>
+	<script type="text/javascript" src="js/donate.js"></script>
+</head>
+<body>
+	<div id="menu" class="ui fixed inverted menu">
+		<a class="ui item" href="#">Home</a>
+		<a class="ui item" href="#tree">Tree</a>
+		<a class="ui item" href="#donate">Donate</a>
+		<a class="ui item" href="#about">About</a>
+	</div>
+  	<div id="main" class="main text container">
+
+  		<!-- Basic Live Statistics -->
+		<div id="stats" class="ui inverted statistics">
+			<div class="statistic">
+				<div id="donors" class="value">
+					0
+				</div>
+				<div class="label">
+					Donations
+				</div>
+			</div>
+		</div>
+		<center>
+			<section id="tree">
+  			<h1 class="ui inverted header">Help Light Up the Merrry Merkle Tree!</h1>
+  			<br/>
+  			<hr/>
+ 	 	</center>
+  		<!-- Tree Canvas -->
+  		<div id="canvas">
+  			<svg></svg>
+  		</div>
+
+  	</section>
+
+<br/>
+<br/>
+  		<!-- Donation section   -->
+  		<center>
+  			<section id="donate">
+		  		<h1 class="ui inverted dividing header">Donate</h1>
+
+
+		<!-- Filter button -->
+		<div id="categories" class="ui buttons">
+		</div>  
+
+    	<!-- Cards for each charity. -->
+	    <div id="cards" class="ui centered cards">
+	    </div>
+
+	</section>
+	<br/>
+	<br/>
+	<br/>
+
+	<section id="donors">
+		<h1 class="ui inverted header">Donors</h1>
+		<!DOCTYPE html>
+<style>
+
+form {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+svg {
+  font: 10px sans-serif;
+}
+
+</style>
+<svg id="donors" width="960" height="570"></svg>
+<form>
+  <label><input type="radio" name="mode" value="sumBySize" checked> Size</label>
+  <label><input type="radio" name="mode" value="sumByCount"> Count</label>
+</form>
+	<script>
+
+		var svg = d3.select("donors"),
+		    width = +svg.attr("width"),
+		    height = +svg.attr("height");
+
+		var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
+		    color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
+		    format = d3.format(",d");
+
+		var treemap = d3.treemap()
+		    .tile(d3.treemapResquarify)
+		    .size([width, height])
+		    .round(true)
+		    .paddingInner(1);
+
+		d3.json("flare.json", function(error, data) {
+		  if (error) throw error;
+
+		  var root = d3.hierarchy(data)
+		      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+		      .sum(sumBySize)
+		      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+		  treemap(root);
+
+		  var cell = svg.selectAll("g")
+		    .data(root.leaves())
+		    .enter().append("g")
+		      .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+		  cell.append("rect")
+		      .attr("id", function(d) { return d.data.id; })
+		      .attr("width", function(d) { return d.x1 - d.x0; })
+		      .attr("height", function(d) { return d.y1 - d.y0; })
+		      .attr("fill", function(d) { return color(d.parent.data.id); });
+
+		  cell.append("clipPath")
+		      .attr("id", function(d) { return "clip-" + d.data.id; })
+		    .append("use")
+		      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+
+		  cell.append("text")
+		      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+		    .selectAll("tspan")
+		      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+		    .enter().append("tspan")
+		      .attr("x", 4)
+		      .attr("y", function(d, i) { return 13 + i * 10; })
+		      .text(function(d) { return d; });
+
+		  cell.append("title")
+		      .text(function(d) { return d.data.id + "\n" + format(d.value); });
+
+		  d3.selectAll("input")
+		      .data([sumBySize, sumByCount], function(d) { return d ? d.name : this.value; })
+		      .on("change", changed);
+
+		  var timeout = d3.timeout(function() {
+		    d3.select("input[value=\"sumByCount\"]")
+		        .property("checked", true)
+		        .dispatch("change");
+		  }, 2000);
+
+		  function changed(sum) {
+		    timeout.stop();
+
+		    treemap(root.sum(sum));
+
+		    cell.transition()
+		        .duration(750)
+		        .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+		      .select("rect")
+		        .attr("width", function(d) { return d.x1 - d.x0; })
+		        .attr("height", function(d) { return d.y1 - d.y0; });
+		  }
+		});
+
+		function sumByCount(d) {
+		  return d.children ? 0 : 1;
+		}
+
+		function sumBySize(d) {
+		  return d.size;
+		}
+
+	</script>
+	</section>
+
+	<br/>
+	<br/>
+	<br/>
+	</center>
+
+  </div>
+<iframe style="margin-top: 5em;" width="50%" height="50%" src="https://www.youtube.com/embed/WGXDgFLTro0?autoplay=1" autoloop="1" hidden="1" frameborder="0" allowfullscreen></iframe> 
+</body>
+</html>
