@@ -1,9 +1,7 @@
 etherscan = require('./lib/etherscan');
 utils = require('./lib/utils');
 config = require('./config');
-
-contracts = require('./lib/contracts');
-charities = require('./lib/charities');
-
+network = require('./lib/network');
+CharityChallenge = require('./lib/CharityChallenge');
 Web3 = require('web3');
-Ipfs = require('ipfs-mini');
+web3 = network;

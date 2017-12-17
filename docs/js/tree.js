@@ -74,7 +74,7 @@ function highlightParents(d) {
 }
 
 function create() {
-	d3.select('svg')
+	d3.select('#leadertree')
 		.selectAll('line')
 		.data(branches)
 		.enter()

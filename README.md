@@ -7,33 +7,20 @@ or realized in a tree with programmable lights.
 
 *** 
 
-### Structure
+### Development
+
 
 
 ```
-├── app.js 						-- just some things to pull in with webpack
-├── bin							-- for scripts  
-├── contracts
-│   └── MerryMerkle.sol 		-- merkle tree charity contract
-├── lib
-│   ├── charities.json  		-- a list of charities that accept bitcoin. need to update this.
-│   ├── etherscan.js  			-- an etherscan listener module
-│   └── utils.js 				-- some other functions
-├── LICENSE
-├── package.json
-├── package-lock.json
-├── public 						-- web stuffs
-│   ├── dist 						- webpack dump
-│   ├── index.html 					- single page app 
-│   └── js 							- scripts
-├── README.md
-└── webpack.config.js
+$ git clone https://github.com/kidwai/merry-merkle.git
+$ npm install 
 ```
 
 ### Todo
 
-
-* Define donation buttons and metamask triggers
-* Update listener to listen for `Donation` events from `MerryMerkle` contract
-* .. 
-
+- [ ] Modify `js/leaderboard.js` to render leaderboard data
+- [ ] Add buttons / form below canvases corresponding to the the functions in [here](contracts/CharityChallenge.sol).
+- [ ] Add event listeners to update 
+	- [ ] Overall statistics: total raised, next milestone, largest donation
+	- [ ] Binary tree: each block, listen to the `CharityChallenge` object (available in the browser) and update the node properties to align with Donation struct obtained from the contract's `leaderboard` array.
+- [ ] Scroll through sections

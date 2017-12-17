@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 49);
+/******/ 	return __webpack_require__(__webpack_require__.s = 52);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -870,7 +870,7 @@
 
 var BigNumber = __webpack_require__(18);
 var sha3 = __webpack_require__(19);
-var utf8 = __webpack_require__(100);
+var utf8 = __webpack_require__(99);
 
 var unitMap = {
     'noether':      '0',
@@ -2399,7 +2399,7 @@ module.exports = g;
 var BigNumber = __webpack_require__(18);
 var utils = __webpack_require__(1);
 var c = __webpack_require__(23);
-var SolidityParam = __webpack_require__(47);
+var SolidityParam = __webpack_require__(50);
 
 
 /**
@@ -2633,7 +2633,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
-var SolidityParam = __webpack_require__(47);
+var SolidityParam = __webpack_require__(50);
 
 /**
  * SolidityType prototype is used to encode/decode solidity params of certain type
@@ -3419,9 +3419,9 @@ module.exports = Method;
 
 
 
-var base64 = __webpack_require__(54)
-var ieee754 = __webpack_require__(55)
-var isArray = __webpack_require__(31)
+var base64 = __webpack_require__(57)
+var ieee754 = __webpack_require__(58)
+var isArray = __webpack_require__(32)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -5445,8 +5445,8 @@ var util = __webpack_require__(17);
 util.inherits = __webpack_require__(7);
 /*</replacement>*/
 
-var Readable = __webpack_require__(34);
-var Writable = __webpack_require__(38);
+var Readable = __webpack_require__(35);
+var Writable = __webpack_require__(39);
 
 util.inherits(Duplex, Readable);
 
@@ -5941,7 +5941,7 @@ function forEach(xs, f) {
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(27), __webpack_require__(28));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(28), __webpack_require__(29));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -9100,8 +9100,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! bignumber.js v2.0.7 https://github.com/Mik
  * @date 2015
  */
 
-var CryptoJS = __webpack_require__(77);
-var sha3 = __webpack_require__(46);
+var CryptoJS = __webpack_require__(76);
+var sha3 = __webpack_require__(49);
 
 module.exports = function (value, options) {
     if (options && options.encoding === 'hex') {
@@ -10230,6 +10230,12 @@ module.exports = {
 
 /***/ }),
 /* 27 */
+/***/ (function(module, exports) {
+
+module.exports = {"network":"kidwai","networks":{"rinkeby":{"chainId":4,"host":"https://rinkeby.infura.io","contracts":{}},"kidwai":{"chainId":0,"host":"http://kidwai.ca","contracts":{"CharityChallenge":"0x41d8ef80dc2ece00c78d6237000be8137ba6f7a6"}},"mainnet":{"chainId":1,"host":"https://mainnet.infura.io","contracts":{}}},"contracts":{"CharityChallenge":{"abi":[{"constant":true,"inputs":[],"name":"end_block","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"charity","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"eth_usd","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"leaderboard","outputs":[{"name":"addr","type":"address"},{"name":"message","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"donations","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"milestones","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_charity","type":"address"},{"name":"_eth_usd","type":"uint256"},{"name":"_duration","type":"uint256"}],"name":"CharityFundraiser","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"i","type":"uint256"},{"name":"message","type":"string"},{"name":"rgb","type":"uint8[3]"}],"name":"setStamp","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"Donation","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"index","type":"uint256"}],"name":"Stamp","type":"event"}],"bin":"606060405260a06040519081016040528061083462ffffff1681526020016120d062ffffff16815260200161627062ffffff16815260200161c4e062ffffff168152602001620189c062ffffff168152506002906005610060929190610071565b50341561006c57600080fd5b6100dd565b82600581019282156100a7579160200282015b828111156100a6578251829062ffffff16905591602001919060010190610084565b5b5090506100b491906100b8565b5090565b6100da91905b808211156100d65760008160009055506001016100be565b5090565b90565b610912806100ec6000396000f30060606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635e0b12591461019d578063934aa023146101c6578063b0fd08711461021b578063bf36839914610244578063cc6cb19a14610330578063e89e4ed61461037d578063ef7f750e146103b4578063f03030ab146103ff575b6007544310151561009e57600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f1935050505015156100ff57600080fd5b3461018860003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2005b34156101a857600080fd5b6101b0610491565b6040518082815260200191505060405180910390f35b34156101d157600080fd5b6101d9610497565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561022657600080fd5b61022e6104bc565b6040518082815260200191505060405180910390f35b341561024f57600080fd5b61026560048080359060200190919050506104c2565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001806020018281038252838181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156103205780601f106102f557610100808354040283529160200191610320565b820191906000526020600020905b81548152906001019060200180831161030357829003601f168201915b5050935050505060405180910390f35b341561033b57600080fd5b610367600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061050a565b6040518082815260200191505060405180910390f35b341561038857600080fd5b61039e6004808035906020019091905050610523565b6040518082815260200191505060405180910390f35b34156103bf57600080fd5b6103fd600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190803590602001909190505061053d565b005b341561040a57600080fd5b61048f600480803590602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919080606001906003806020026040519081016040528092919082600360200280828437820191505050505091905050610592565b005b60075481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015481565b6008816080811015156104d157fe5b600302016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600101905082565b6101886020528060005260406000206000915090505481565b60028160058110151561053257fe5b016000915090505481565b826000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600181905550804301600781905550505050565b6080831015156105a157600080fd5b61018860003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461018860006008866080811015156105f657fe5b6003020160000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015610772576060604051908101604052803373ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152506008846080811015156106a057fe5b6003020160008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506020820151816001019080519060200190610707929190610777565b5060408201518160020190600361071f9291906107f7565b509050503373ffffffffffffffffffffffffffffffffffffffff167fc4fc9ca6a39c5b99f9b7c405e3fcde6815a84b3161910094d18ee4c069cde77a846040518082815260200191505060405180910390a25b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106107b857805160ff19168380011785556107e6565b828001600101855582156107e6579182015b828111156107e55782518255916020019190600101906107ca565b5b5090506107f39190610891565b5090565b826003601f016020900481019282156108805791602002820160005b8382111561085157835183826101000a81548160ff021916908360ff1602179055509260200192600101602081600001049283019260010302610813565b801561087e5782816101000a81549060ff0219169055600101602081600001049283019260010302610851565b505b50905061088d91906108b6565b5090565b6108b391905b808211156108af576000816000905550600101610897565b5090565b90565b6108e391905b808211156108df57600081816101000a81549060ff0219169055506001016108bc565b5090565b905600a165627a7a723058207c52e034dc73599fd8b4c30d5f6a0f2ac098c1dba902084788870898aa3b9b140029"}}}
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -10384,7 +10390,7 @@ module.exports = {
 }));
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -10532,7 +10538,7 @@ module.exports = {
 }));
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -10559,15 +10565,15 @@ module.exports = {
 
 var f = __webpack_require__(4);
 
-var SolidityTypeAddress = __webpack_require__(103);
-var SolidityTypeBool = __webpack_require__(104);
-var SolidityTypeInt = __webpack_require__(105);
-var SolidityTypeUInt = __webpack_require__(106);
-var SolidityTypeDynamicBytes = __webpack_require__(107);
-var SolidityTypeString = __webpack_require__(108);
-var SolidityTypeReal = __webpack_require__(109);
-var SolidityTypeUReal = __webpack_require__(110);
-var SolidityTypeBytes = __webpack_require__(111);
+var SolidityTypeAddress = __webpack_require__(102);
+var SolidityTypeBool = __webpack_require__(103);
+var SolidityTypeInt = __webpack_require__(104);
+var SolidityTypeUInt = __webpack_require__(105);
+var SolidityTypeDynamicBytes = __webpack_require__(106);
+var SolidityTypeString = __webpack_require__(107);
+var SolidityTypeReal = __webpack_require__(108);
+var SolidityTypeUReal = __webpack_require__(109);
+var SolidityTypeBytes = __webpack_require__(110);
 
 var isDynamic = function (solidityType, type) {
    return solidityType.isDynamicType(type) ||
@@ -10785,14 +10791,14 @@ module.exports = coder;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
   * @namespace utils
 **/
 
-const https = __webpack_require__(51);
+const https = __webpack_require__(54);
 
 /**
   *
@@ -10952,7 +10958,7 @@ exports.ethToUsd = function (eth) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -10963,7 +10969,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
@@ -11039,20 +11045,20 @@ xhr = null // Help gc
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(34);
+exports = module.exports = __webpack_require__(35);
 exports.Stream = exports;
 exports.Readable = exports;
-exports.Writable = __webpack_require__(38);
+exports.Writable = __webpack_require__(39);
 exports.Duplex = __webpack_require__(11);
-exports.Transform = __webpack_require__(40);
-exports.PassThrough = __webpack_require__(62);
+exports.Transform = __webpack_require__(41);
+exports.PassThrough = __webpack_require__(65);
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11087,7 +11093,7 @@ var processNextTick = __webpack_require__(20);
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(31);
+var isArray = __webpack_require__(32);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -11097,7 +11103,7 @@ var Duplex;
 Readable.ReadableState = ReadableState;
 
 /*<replacement>*/
-var EE = __webpack_require__(35).EventEmitter;
+var EE = __webpack_require__(36).EventEmitter;
 
 var EElistenerCount = function (emitter, type) {
   return emitter.listeners(type).length;
@@ -11105,7 +11111,7 @@ var EElistenerCount = function (emitter, type) {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(36);
+var Stream = __webpack_require__(37);
 /*</replacement>*/
 
 // TODO(bmeurer): Change this back to const once hole checks are
@@ -11127,7 +11133,7 @@ util.inherits = __webpack_require__(7);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(57);
+var debugUtil = __webpack_require__(60);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -11136,8 +11142,8 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(58);
-var destroyImpl = __webpack_require__(37);
+var BufferList = __webpack_require__(61);
+var destroyImpl = __webpack_require__(38);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -11220,7 +11226,7 @@ function ReadableState(options, stream) {
   this.decoder = null;
   this.encoding = null;
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(39).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(40).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
@@ -11376,7 +11382,7 @@ Readable.prototype.isPaused = function () {
 
 // backwards compatibility.
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(39).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(40).StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
   return this;
@@ -12066,7 +12072,7 @@ function indexOf(xs, x) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(10)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -12374,14 +12380,14 @@ function isUndefined(arg) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(35).EventEmitter;
+module.exports = __webpack_require__(36).EventEmitter;
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12459,7 +12465,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12535,12 +12541,12 @@ util.inherits = __webpack_require__(7);
 
 /*<replacement>*/
 var internalUtil = {
-  deprecate: __webpack_require__(61)
+  deprecate: __webpack_require__(64)
 };
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(36);
+var Stream = __webpack_require__(37);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -12554,7 +12560,7 @@ function _isUint8Array(obj) {
 }
 /*</replacement>*/
 
-var destroyImpl = __webpack_require__(37);
+var destroyImpl = __webpack_require__(38);
 
 util.inherits(Writable, Stream);
 
@@ -13127,10 +13133,10 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(59).setImmediate, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(62).setImmediate, __webpack_require__(3)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13408,7 +13414,7 @@ function simpleEnd(buf) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13628,7 +13634,7 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13655,8 +13661,8 @@ function done(stream, er, data) {
 
 
 
-var punycode = __webpack_require__(66);
-var util = __webpack_require__(67);
+var punycode = __webpack_require__(69);
+var util = __webpack_require__(70);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -13731,7 +13737,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(68);
+    querystring = __webpack_require__(71);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -14367,7 +14373,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -14395,7 +14401,30 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Web3 = __webpack_require__(45);
+var config = __webpack_require__(27);
+
+module.exports = new Web3(new Web3.providers.HttpProvider(config.networks[config.network].host));
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Web3 = __webpack_require__(74);
+
+// dont override global variable
+if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
+    window.Web3 = Web3;
+}
+
+module.exports = Web3;
+
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports) {
 
 /*
@@ -14486,7 +14515,7 @@ module.exports = Jsonrpc;
 
 
 /***/ }),
-/* 44 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -14690,7 +14719,7 @@ module.exports = Jsonrpc;
 }));
 
 /***/ }),
-/* 45 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -15018,7 +15047,7 @@ module.exports = Jsonrpc;
 }));
 
 /***/ }),
-/* 46 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -15346,7 +15375,7 @@ module.exports = Jsonrpc;
 }));
 
 /***/ }),
-/* 47 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -15504,7 +15533,7 @@ module.exports = SolidityParam;
 
 
 /***/ }),
-/* 48 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -15530,7 +15559,7 @@ module.exports = SolidityParam;
  */
 
 var utils = __webpack_require__(1);
-var coder = __webpack_require__(29);
+var coder = __webpack_require__(30);
 var formatters = __webpack_require__(6);
 var sha3 = __webpack_require__(19);
 var Filter = __webpack_require__(25);
@@ -15718,21 +15747,20 @@ module.exports = SolidityEvent;
 
 
 /***/ }),
-/* 49 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-etherscan = __webpack_require__(50);
-utils = __webpack_require__(30);
-config = __webpack_require__(71);
+etherscan = __webpack_require__(53);
+utils = __webpack_require__(31);
+config = __webpack_require__(27);
+network = __webpack_require__(44);
+CharityChallenge = __webpack_require__(132);
+Web3 = __webpack_require__(45);
+web3 = network;
 
-contracts = __webpack_require__(72);
-charities = __webpack_require__(73);
-
-Web3 = __webpack_require__(74);
-Ipfs = __webpack_require__(133);
 
 /***/ }),
-/* 50 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -15741,7 +15769,7 @@ Ipfs = __webpack_require__(133);
 **/
 
 var base_url = 'https://api.etherscan.io/api';
-var utils = __webpack_require__(30);
+var utils = __webpack_require__(31);
 
 
 
@@ -15939,11 +15967,11 @@ exports.filterTransactions = function (address, block) {
 }
 
 /***/ }),
-/* 51 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var http = __webpack_require__(52)
-var url = __webpack_require__(41)
+var http = __webpack_require__(55)
+var url = __webpack_require__(42)
 
 var https = module.exports
 
@@ -15976,13 +16004,13 @@ function validateParams (params) {
 
 
 /***/ }),
-/* 52 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(53)
-var extend = __webpack_require__(64)
-var statusCodes = __webpack_require__(65)
-var url = __webpack_require__(41)
+/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(56)
+var extend = __webpack_require__(67)
+var statusCodes = __webpack_require__(68)
+var url = __webpack_require__(42)
 
 var http = exports
 
@@ -16061,14 +16089,14 @@ http.METHODS = [
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 53 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(32)
+/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(33)
 var inherits = __webpack_require__(7)
-var response = __webpack_require__(56)
-var stream = __webpack_require__(33)
-var toArrayBuffer = __webpack_require__(63)
+var response = __webpack_require__(59)
+var stream = __webpack_require__(34)
+var toArrayBuffer = __webpack_require__(66)
 
 var IncomingMessage = response.IncomingMessage
 var rStates = response.readyStates
@@ -16374,7 +16402,7 @@ var unsafeHeaders = [
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9).Buffer, __webpack_require__(3), __webpack_require__(10)))
 
 /***/ }),
-/* 54 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16495,7 +16523,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 55 */
+/* 58 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -16585,12 +16613,12 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 56 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(32)
+/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(33)
 var inherits = __webpack_require__(7)
-var stream = __webpack_require__(33)
+var stream = __webpack_require__(34)
 
 var rStates = exports.readyStates = {
 	UNSENT: 0,
@@ -16774,13 +16802,13 @@ IncomingMessage.prototype._onXHRProgress = function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(9).Buffer, __webpack_require__(3)))
 
 /***/ }),
-/* 57 */
+/* 60 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 58 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16860,7 +16888,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 59 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -16913,13 +16941,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(60);
+__webpack_require__(63);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 60 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -17112,7 +17140,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(10)))
 
 /***/ }),
-/* 61 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -17186,7 +17214,7 @@ function config (name) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17219,7 +17247,7 @@ function config (name) {
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(40);
+var Transform = __webpack_require__(41);
 
 /*<replacement>*/
 var util = __webpack_require__(17);
@@ -17239,7 +17267,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 63 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(9).Buffer
@@ -17272,7 +17300,7 @@ module.exports = function (buf) {
 
 
 /***/ }),
-/* 64 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = extend
@@ -17297,7 +17325,7 @@ function extend() {
 
 
 /***/ }),
-/* 65 */
+/* 68 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -17367,7 +17395,7 @@ module.exports = {
 
 
 /***/ }),
-/* 66 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -17903,10 +17931,10 @@ module.exports = {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42)(module), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(43)(module), __webpack_require__(3)))
 
 /***/ }),
-/* 67 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17929,18 +17957,18 @@ module.exports = {
 
 
 /***/ }),
-/* 68 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(69);
-exports.encode = exports.stringify = __webpack_require__(70);
+exports.decode = exports.parse = __webpack_require__(72);
+exports.encode = exports.stringify = __webpack_require__(73);
 
 
 /***/ }),
-/* 69 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18031,7 +18059,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 70 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18123,39 +18151,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 71 */
-/***/ (function(module, exports) {
-
-module.exports = {"network":"rinkeby","chainId":4,"contracts":{"SimpleFundraiser":"0x08970fed061e7747cd9a38d680a601510cb659fb"}}
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports) {
-
-module.exports = {"MerryMerkle":{"abi":[{"constant":false,"inputs":[{"name":"rgb","type":"uint8[3]"}],"name":"setLight","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"recognition","type":"bytes32"}],"name":"setRecognition","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"donors","outputs":[{"name":"donation","type":"uint256"},{"name":"recognition","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"mm","outputs":[{"name":"height","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Donation","type":"event"}],"bin":"6060604052606060405190810160405280674563918244f4000068ffffffffffffffffff168152602001678ac7230489e8000068ffffffffffffffffff16815260200168056bc75e2d6310000068ffffffffffffffffff16815250600390600361006a92919061007b565b50341561007657600080fd5b6100ed565b82600381019282156100b7579160200282015b828111156100b6578251829068ffffffffffffffffff1690559160200191906001019061008e565b5b5090506100c491906100c8565b5090565b6100ea91905b808211156100e65760008160009055506001016100ce565b5090565b90565b610500806100fc6000396000f300606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806325a12a561461010257806342cdc48514610155578063ca0cdea814610189578063e90eaa51146101e5575b34600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2005b61013b6004808060600190600380602002604051908101604052809291908260036020028082843782019150505050509190505061020e565b604051808215151515815260200191505060405180910390f35b61016f6004808035600019169060200190919050506102b1565b604051808215151515815260200191505060405180910390f35b341561019457600080fd5b6101c0600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610375565b6040518083815260200182600019166000191681526020019250505060405180910390f35b34156101f057600080fd5b6101f8610399565b6040518082815260200191505060405180910390f35b60006003600060038110151561022057fe5b0154341015151561023057600080fd5b61023e6000600654846103a5565b5060006001015460020a600181151561025357fe5b06600654016006819055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2919050565b6000600360026003811015156102c357fe5b015434101515156102d357600080fd5b81600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010181600019169055503373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a260019050919050565b60026020528060005260406000206000915090508060000154908060010154905082565b60008060010154905081565b6000836001015460020a831015156103bc57600080fd5b5b60008311156103ff57818460000160008581526020019081526020016000209060036103ea92919061040a565b506002838115156103f757fe5b0492506103bd565b600190509392505050565b826003601f016020900481019282156104935791602002820160005b8382111561046457835183826101000a81548160ff021916908360ff1602179055509260200192600101602081600001049283019260010302610426565b80156104915782816101000a81549060ff0219169055600101602081600001049283019260010302610464565b505b5090506104a091906104a4565b5090565b6104d191905b808211156104cd57600081816101000a81549060ff0219169055506001016104aa565b5090565b905600a165627a7a7230582012e2997d128999496ca0d85701c852adba275f40b1457a4edff6b9447793d72f0029"},"SimpleFundraiser":{"abi":[{"constant":false,"inputs":[{"name":"r","type":"uint8"},{"name":"g","type":"uint8"},{"name":"b","type":"uint8"}],"name":"setLight","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"r","type":"uint8"},{"indexed":false,"name":"g","type":"uint8"},{"indexed":false,"name":"b","type":"uint8"}],"name":"Light","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Donation","type":"event"}],"bin":"6060604052670de0b6b3a7640000600055341561001b57600080fd5b6101ad8061002a6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063627a25a814610091575b3373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a2005b6100c2600480803560ff1690602001909190803560ff1690602001909190803560ff169060200190919050506100c4565b005b60005434101515156100d557600080fd5b7f73e3b30d340f6676791d363dc4a3bacc64604289006a91bde44a4afaea6ced40838383604051808460ff1660ff1681526020018360ff1660ff1681526020018260ff1660ff168152602001935050505060405180910390a13373ffffffffffffffffffffffffffffffffffffffff167f5d8bc849764969eb1bcc6d0a2f55999d0167c1ccec240a4f39cf664ca9c4148e346040518082815260200191505060405180910390a25050505600a165627a7a72305820771fb22f7fa1c7c7c00464c83684ce7ada238a786cdfeaab66b20cb156fe9ca20029","instance":"0x08970fed061e7747cd9a38d680a601510cb659fb"}}
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-module.exports = [{"name":"The Water Project","url":"thewaterproject.com","description":"The Water Project is unlocking human potential by providing sustainable water projects to communities in sub-Saharan Africa who suffer needlessly from a lack of access to clean water and proper sanitation. Access to water unlocks potential. It removes obstacles that hinder a community from growing itself out of poverty.","payment":{"bitcoin":"1HesYJSP1QqcyPEjnQ9vzBL1wujruNGe7R"}},{"name":"Omni Nano","url":"www.omninano.org","description":"Omni Nano is a 501(c)(3) public benefit organization devoted to nanotechnology education. Our curriculum is designed for high school and college students and focuses on the practical applications of nanotechnology to promote professional development and STEM career opportunities.","payment":{"bitcoin":"16Sy8mvjyNgCRYS14m1Rtca3UfrFPzz9eJ"}},{"name":"Seans Outpost","url":"http://seansoutpost.com","description":"Pensacola Homeless Outreach…fueled by Bitcoin.","payment":{"bitcoin":"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"}},{"name":"Save The Children","url":"www.savethechildren.org","description":"Save the Children invests in childhood – every day – in times of crisis and for our future. In the United States and around the world – we give children a healthy start – the opportunity to learn and protection from harm.","payment":{}},{"name":"Songs of Love","url":"www.songsoflove.org","description":"The Songs of Love Foundation is a national nonprofit 501(c)(3) organization that creates free personalized original songs to uplift children and teens currently facing tough medical physical or emotional challenges. Each CD is professionally produced with lyrics containing the child's name and references to all of his or her favorite activities things people and pets. Songs are written and performed in any language in the musical style that the child likes best by a variety of talented professionals.","payment":{"bitcoin":"1946W6LDsEYF9B5sPYDKfwLw6YBZuHns4L"}},{"name":"Watsi","url":"Watsi.org","description":"Watsi is a global crowdfunding platforfor healthcare that enables anyone to donate as little as $5 to directly fund life - changing medical care for people in need.100 % of every donation funds medical care and we are dedicated to complete transparency","payment":{"bitcoin":"1PAt5oKQGBRigFDY6fB2WgQTtQJNzFyTDr"}},{"name":"TunaPanda","url":"www.tunapanda.org","description":"Tunapanda Institute does digital era vocational skill training in low-income parts of East Africa. The organization focuses on skills like web design computer programming and video editing that can help people earn an income improve their communities and engage in meaningful self-expression. They deploy computer networks using open source software and free (libre) educational video content.","payment":{"bitcoin":"1CU5YgjquupDw6UeXEyA9VEBH34R7fZ19b"}},{"name":"Chicago Wish Foundation","url":"chicagowish.org/bitcoin-donation","description":"A Special Wish Chicago is the wish-granting foundation in the Chicagoland area dedicated to enlivening families with hope and joy by granting the wishes of local children and young adults – from birth through age 20 – who have been diagnosed with life-threatening conditions. The Chicago chapter is wholeheartedly committed to creating special memories through connecting children with the loving hearts and donations of individuals and corporate sponsors in the Chicagoland community.","payment":{"bitcoin":"16DEzKc9fX4XfgGzEvQUJmoYeUrbRNXqxe"}},{"name":"Run 2 Rescure","url":"run2rescue.com/bitcoin.html","description":"Run 2 Rescue is a Christian non-profit organization committed to restoring victims of sex trafficking.","payment":{"bitcoin":"1AS3TiTqgJZK6CfNfqcbPXSx4PTFvfghvF"}}]
-
-/***/ }),
 /* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Web3 = __webpack_require__(75);
-
-// dont override global variable
-if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
-    window.Web3 = Web3;
-}
-
-module.exports = Web3;
-
-
-/***/ }),
-/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -18185,23 +18181,23 @@ module.exports = Web3;
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(76);
+var RequestManager = __webpack_require__(75);
 var Iban = __webpack_require__(24);
-var Eth = __webpack_require__(101);
-var DB = __webpack_require__(120);
-var Shh = __webpack_require__(121);
-var Net = __webpack_require__(122);
-var Personal = __webpack_require__(123);
-var Swarm = __webpack_require__(124);
-var Settings = __webpack_require__(125);
-var version = __webpack_require__(126);
+var Eth = __webpack_require__(100);
+var DB = __webpack_require__(119);
+var Shh = __webpack_require__(120);
+var Net = __webpack_require__(121);
+var Personal = __webpack_require__(122);
+var Swarm = __webpack_require__(123);
+var Settings = __webpack_require__(124);
+var version = __webpack_require__(125);
 var utils = __webpack_require__(1);
 var sha3 = __webpack_require__(19);
-var extend = __webpack_require__(127);
-var Batch = __webpack_require__(128);
+var extend = __webpack_require__(126);
+var Batch = __webpack_require__(127);
 var Property = __webpack_require__(16);
-var HttpProvider = __webpack_require__(129);
-var IpcProvider = __webpack_require__(132);
+var HttpProvider = __webpack_require__(128);
+var IpcProvider = __webpack_require__(131);
 var BigNumber = __webpack_require__(18);
 
 
@@ -18313,7 +18309,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -18342,7 +18338,7 @@ module.exports = Web3;
  * @date 2014
  */
 
-var Jsonrpc = __webpack_require__(43);
+var Jsonrpc = __webpack_require__(46);
 var utils = __webpack_require__(1);
 var c = __webpack_require__(23);
 var errors = __webpack_require__(15);
@@ -18584,13 +18580,13 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(78), __webpack_require__(79), __webpack_require__(12), __webpack_require__(13), __webpack_require__(27), __webpack_require__(44), __webpack_require__(80), __webpack_require__(45), __webpack_require__(81), __webpack_require__(46), __webpack_require__(82), __webpack_require__(28), __webpack_require__(83), __webpack_require__(14), __webpack_require__(2), __webpack_require__(84), __webpack_require__(85), __webpack_require__(86), __webpack_require__(87), __webpack_require__(88), __webpack_require__(89), __webpack_require__(90), __webpack_require__(91), __webpack_require__(92), __webpack_require__(93), __webpack_require__(94), __webpack_require__(95), __webpack_require__(96), __webpack_require__(97), __webpack_require__(98), __webpack_require__(99));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(77), __webpack_require__(78), __webpack_require__(12), __webpack_require__(13), __webpack_require__(28), __webpack_require__(47), __webpack_require__(79), __webpack_require__(48), __webpack_require__(80), __webpack_require__(49), __webpack_require__(81), __webpack_require__(29), __webpack_require__(82), __webpack_require__(14), __webpack_require__(2), __webpack_require__(83), __webpack_require__(84), __webpack_require__(85), __webpack_require__(86), __webpack_require__(87), __webpack_require__(88), __webpack_require__(89), __webpack_require__(90), __webpack_require__(91), __webpack_require__(92), __webpack_require__(93), __webpack_require__(94), __webpack_require__(95), __webpack_require__(96), __webpack_require__(97), __webpack_require__(98));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -18607,7 +18603,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -18688,7 +18684,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -18842,13 +18838,13 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(44));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(47));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -18927,13 +18923,13 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(45));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(22), __webpack_require__(48));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -19015,7 +19011,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -19287,13 +19283,13 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(27), __webpack_require__(28));
+		module.exports = exports = factory(__webpack_require__(0), __webpack_require__(28), __webpack_require__(29));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -19437,7 +19433,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19520,7 +19516,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19583,7 +19579,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19704,7 +19700,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19763,7 +19759,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19808,7 +19804,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19862,7 +19858,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19911,7 +19907,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -19956,7 +19952,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20006,7 +20002,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20041,7 +20037,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20112,7 +20108,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -20349,7 +20345,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21124,7 +21120,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21268,7 +21264,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21465,7 +21461,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -21660,7 +21656,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/utf8js v2.1.2 by @mathias */
@@ -21907,10 +21903,10 @@ module.exports = RequestManager;
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42)(module), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(43)(module), __webpack_require__(3)))
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21944,13 +21940,13 @@ var utils = __webpack_require__(1);
 var Method = __webpack_require__(8);
 var Property = __webpack_require__(16);
 var c = __webpack_require__(23);
-var Contract = __webpack_require__(102);
+var Contract = __webpack_require__(101);
 var watches = __webpack_require__(26);
 var Filter = __webpack_require__(25);
-var IsSyncing = __webpack_require__(114);
-var namereg = __webpack_require__(115);
+var IsSyncing = __webpack_require__(113);
+var namereg = __webpack_require__(114);
 var Iban = __webpack_require__(24);
-var transfer = __webpack_require__(118);
+var transfer = __webpack_require__(117);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -22271,7 +22267,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -22297,10 +22293,10 @@ module.exports = Eth;
  */
 
 var utils = __webpack_require__(1);
-var coder = __webpack_require__(29);
-var SolidityEvent = __webpack_require__(48);
-var SolidityFunction = __webpack_require__(112);
-var AllEvents = __webpack_require__(113);
+var coder = __webpack_require__(30);
+var SolidityEvent = __webpack_require__(51);
+var SolidityFunction = __webpack_require__(111);
+var AllEvents = __webpack_require__(112);
 
 /**
  * Should be called to encode constructor params
@@ -22587,7 +22583,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22619,7 +22615,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22651,7 +22647,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22689,7 +22685,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22727,7 +22723,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22753,7 +22749,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22779,7 +22775,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22817,7 +22813,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22855,7 +22851,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(4);
@@ -22890,7 +22886,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -22915,7 +22911,7 @@ module.exports = SolidityTypeBytes;
  * @date 2015
  */
 
-var coder = __webpack_require__(29);
+var coder = __webpack_require__(30);
 var utils = __webpack_require__(1);
 var errors = __webpack_require__(15);
 var formatters = __webpack_require__(6);
@@ -23179,7 +23175,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23205,7 +23201,7 @@ module.exports = SolidityFunction;
  */
 
 var sha3 = __webpack_require__(19);
-var SolidityEvent = __webpack_require__(48);
+var SolidityEvent = __webpack_require__(51);
 var formatters = __webpack_require__(6);
 var utils = __webpack_require__(1);
 var Filter = __webpack_require__(25);
@@ -23273,7 +23269,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23372,7 +23368,7 @@ module.exports = IsSyncing;
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23397,8 +23393,8 @@ module.exports = IsSyncing;
  * @date 2015
  */
 
-var globalRegistrarAbi = __webpack_require__(116);
-var icapRegistrarAbi= __webpack_require__(117);
+var globalRegistrarAbi = __webpack_require__(115);
+var icapRegistrarAbi= __webpack_require__(116);
 
 var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
 var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -23417,19 +23413,19 @@ module.exports = {
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23455,7 +23451,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],
  */
 
 var Iban = __webpack_require__(24);
-var exchangeAbi = __webpack_require__(119);
+var exchangeAbi = __webpack_require__(118);
 
 /**
  * Should be used to make Iban transfer
@@ -23527,13 +23523,13 @@ module.exports = transfer;
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23605,7 +23601,7 @@ module.exports = DB;
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23755,7 +23751,7 @@ module.exports = Shh;
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23813,7 +23809,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23935,7 +23931,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24087,7 +24083,7 @@ module.exports = Swarm;
 
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports) {
 
 
@@ -24102,13 +24098,13 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.20.2"}
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(6);
@@ -24162,7 +24158,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -24187,7 +24183,7 @@ module.exports = extend;
  * @date 2015
  */
 
-var Jsonrpc = __webpack_require__(43);
+var Jsonrpc = __webpack_require__(46);
 var errors = __webpack_require__(15);
 
 var Batch = function (web3) {
@@ -24234,7 +24230,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -24270,10 +24266,10 @@ if (typeof window !== 'undefined' && window.XMLHttpRequest) {
   XMLHttpRequest = window.XMLHttpRequest; // jshint ignore: line
 // node
 } else {
-  XMLHttpRequest = __webpack_require__(130).XMLHttpRequest; // jshint ignore: line
+  XMLHttpRequest = __webpack_require__(129).XMLHttpRequest; // jshint ignore: line
 }
 
-var XHR2 = __webpack_require__(131); // jshint ignore: line
+var XHR2 = __webpack_require__(130); // jshint ignore: line
 
 /**
  * HttpProvider should be used to send rpc calls over http
@@ -24398,7 +24394,7 @@ module.exports = HttpProvider;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9).Buffer))
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24414,14 +24410,14 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports) {
 
 module.exports = XMLHttpRequest;
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24635,195 +24631,15 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var network = __webpack_require__(44);
+var config = __webpack_require__(27);
 
 
-var XMLHttpRequest = __webpack_require__(134);
-
-module.exports = IPFS;
-
-/**
- * The constructor object
- * @param {Object} `provider` the provider object
- * @return {Object} `ipfs` returns an IPFS instance
- * @throws if the `new` flag is not used
- */
-function IPFS(provider) {
-  if (!(this instanceof IPFS)) {
-    throw new Error('[ipfs-mini] IPFS instance must be instantiated with "new" flag (e.g. var ipfs = new IPFS("http://localhost:8545");).');
-  }
-
-  var self = this;
-  self.setProvider(provider || {});
-}
-
-/**
- * Sets the provider of the IPFS instance
- * @param {Object} `provider` the provider object
- * @throws if the provider object is not an object
- */
-IPFS.prototype.setProvider = function setProvider(provider) {
-  if (typeof provider !== 'object') {
-    throw new Error('[ifpsjs] provider must be type Object, got \'' + typeof provider + '\'.');
-  }
-  var self = this;
-  var data = self.provider = Object.assign({
-    host: '127.0.0.1',
-    pinning: true,
-    port: '5001',
-    protocol: 'http',
-    base: '/api/v0' }, provider || {});
-  self.requestBase = String(data.protocol + '://' + data.host + ':' + data.port + data.base);
-};
-
-/**
- * Sends an async data packet to an IPFS node
- * @param {Object} `opts` the options object
- * @param {Function} `cb` the provider callback
- * @callback returns an error if any, or the data from IPFS
- */
-IPFS.prototype.sendAsync = function sendAsync(opts, cb) {
-  var self = this;
-  var request = new XMLHttpRequest(); // eslint-disable-line
-  var options = opts || {};
-  var callback = cb || function emptyCallback() {};
-
-  request.onreadystatechange = function () {
-    if (request.readyState === 4 && request.timeout !== 1) {
-      if (request.status !== 200) {
-        callback(new Error('[ipfs-mini] status ' + request.status + ': ' + request.responseText), null);
-      } else {
-        try {
-          callback(null, options.jsonParse ? JSON.parse(request.responseText) : request.responseText);
-        } catch (jsonError) {
-          callback(new Error('[ipfs-mini] while parsing data: \'' + String(request.responseText) + '\', error: ' + String(jsonError) + ' with provider: \'' + self.requestBase + '\'', null));
-        }
-      }
-    }
-  };
-
-  var pinningURI = self.provider.pinning && opts.uri === '/add' ? '?pin=true' : '';
-
-  if (options.payload) {
-    request.open('POST', '' + self.requestBase + opts.uri + pinningURI);
-  } else {
-    request.open('GET', '' + self.requestBase + opts.uri + pinningURI);
-  }
-
-  if (options.accept) {
-    request.setRequestHeader('accept', options.accept);
-  }
-
-  if (options.payload && options.boundary) {
-    request.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + options.boundary);
-    request.send(options.payload);
-  } else {
-    request.send();
-  }
-};
-
-/**
- * creates a boundary that isn't part of the payload
- */
-function createBoundary(data) {
-  while (true) {
-    var boundary = '----IPFSMini' + Math.random() * 100000 + '.' + Math.random() * 100000;
-    if (data.indexOf(boundary) === -1) {
-      return boundary;
-    }
-  }
-}
-
-/**
- * Add an string or buffer to IPFS
- * @param {String|Buffer} `input` a single string or buffer
- * @param {Function} `callback` a callback, with (error, ipfsHash String)
- * @callback {String} `ipfsHash` returns an IPFS hash string
- */
-IPFS.prototype.add = function addData(input, callback) {
-  var data = typeof input === 'object' && input.isBuffer ? input.toString('binary') : input;
-  var boundary = createBoundary(data);
-  var payload = '--' + boundary + '\r\nContent-Disposition: form-data; name="path"\r\nContent-Type: application/octet-stream\r\n\r\n' + data + '\r\n--' + boundary + '--';
-
-  var addCallback = function addCallback(err, result) {
-    return callback(err, !err ? result.Hash : null);
-  };
-  this.sendAsync({
-    jsonParse: true,
-    accept: 'application/json',
-    uri: '/add',
-    payload: payload, boundary: boundary
-  }, addCallback);
-};
-
-/**
- * Add an JSON object to IPFS
- * @param {Object} `jsonData` a single JSON object
- * @param {Function} `callback` a callback, with (error, ipfsHash String)
- * @callback {String} `ipfsHash` returns an IPFS hash string
- */
-IPFS.prototype.addJSON = function addJson(jsonData, callback) {
-  var self = this;
-  self.add(JSON.stringify(jsonData), callback);
-};
-
-/**
- * Get an object stat `/object/stat` for an IPFS hash
- * @param {String} `ipfsHash` a single IPFS hash String
- * @param {Function} `callback` a callback, with (error, stats Object)
- * @callback {Object} `stats` returns the stats object for that IPFS hash
- */
-IPFS.prototype.stat = function cat(ipfsHash, callback) {
-  var self = this;
-  self.sendAsync({ jsonParse: true, uri: '/object/stat/' + ipfsHash }, callback);
-};
-
-/**
- * Get the data from an IPFS hash
- * @param {String} `ipfsHash` a single IPFS hash String
- * @param {Function} `callback` a callback, with (error, stats Object)
- * @callback {String} `data` returns the output data
- */
-IPFS.prototype.cat = function cat(ipfsHash, callback) {
-  var self = this;
-  self.sendAsync({ uri: '/cat/' + ipfsHash }, callback);
-};
-
-/**
- * Get the data from an IPFS hash that is a JSON object
- * @param {String} `ipfsHash` a single IPFS hash String
- * @param {Function} `callback` a callback, with (error, json Object)
- * @callback {Object} `data` returns the output data JSON object
- */
-IPFS.prototype.catJSON = function cat(ipfsHash, callback) {
-  var self = this;
-  self.cat(ipfsHash, function (jsonError, jsonResult) {
-    // eslint-disable-line
-    if (jsonError) {
-      return callback(jsonError, null);
-    }
-
-    try {
-      callback(null, JSON.parse(jsonResult));
-    } catch (jsonParseError) {
-      callback(jsonParseError, null);
-    }
-  });
-};
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var XMLHttpRequest = window.XMLHttpRequest; // eslint-disable-line
-
-module.exports = XMLHttpRequest;
+module.exports = network.eth.contract(config.contracts.CharityChallenge.abi)
+					 .at(config.networks[config.network].contracts.CharityChallenge);
 
 /***/ })
 /******/ ]);
